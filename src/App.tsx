@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Features } from "./components/Features";
 import { Home } from "./components/Home";
 import { PageHeader } from "./components/PageHeader";
 
@@ -10,6 +11,9 @@ export function App() {
       <PageHeader />
       <Container>
         <Home />
+      </Container>
+      <Container>
+        <Features />
       </Container>
 
     </div>

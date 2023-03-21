@@ -69,13 +69,3 @@ const NavbarItem = styled.li`
         border-bottom: 0.2rem solid var(--gray);
     }
 `
-// const JoinButton = styled.button`
-//     color: var(--white);
-//     background-color: var(--red);
-//     padding: 1rem 2rem;
-//     border: 0;
-//     border-radius: 0.8rem;
-//     font-weight: bold;
-//     text-transform: uppercase;
-//     font-size: 1.2rem;
-// `

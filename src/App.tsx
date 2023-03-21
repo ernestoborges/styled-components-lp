@@ -22,6 +22,6 @@ const Container = styled.section`
   padding-top: 6rem;
   display: flex;
   align-items: center;
-
+  position: relative;
 `
 

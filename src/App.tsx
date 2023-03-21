@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Features } from "./components/Features";
 import { Home } from "./components/Home";
 import { PageHeader } from "./components/PageHeader";
+import { Services } from "./components/Services";
 
 
 export function App() {
@@ -14,6 +15,9 @@ export function App() {
       </Container>
       <Container>
         <Features />
+      </Container>
+      <Container>
+        <Services />
       </Container>
 
     </div>

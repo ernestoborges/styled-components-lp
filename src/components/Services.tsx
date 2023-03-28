@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {useState} from "react"
+import { useState } from "react"
 import { AiOutlineSearch, AiOutlinePlayCircle } from "react-icons/ai"
 import { StyledButton } from "./Button"
 
@@ -9,8 +9,14 @@ export function Services() {
     return (
         <>
             <Left>
-                <Image src="images/woman-tablet.png" hide={showVideo} />
-                <Video />
+                <Image src="images/woman-tablet.png" showVideo={showVideo} />
+                <Video
+                    showVideo={showVideo}
+                    autoPlay
+                    loop
+                    controls
+                    src="https://player.vimeo.com/external/449759244.sd.mp4?s=d5f3da46ddc17aa69a7de84f1e420610ebd2a391&profile_id=139&oauth2_token_id=57447761"
+                />
             </Left>
             <Right>
                 <Article>
@@ -30,13 +36,17 @@ export function Services() {
                         </ServicesList>
                     </section>
                     <footer>
-                        <Button onClick={()=>setShowVideo(!showVideo)}><PlayIcon />How it works</Button>
+                        <Button onClick={() => setShowVideo(!showVideo)}><PlayIcon />How it works</Button>
                     </footer>
                 </Article>
             </Right>
 
         </>
     )
+}
+
+interface MediaProps {
+    showVideo: boolean
 }
 
 const Left = styled.div`
@@ -48,8 +58,19 @@ const Left = styled.div`
 `
 const Image = styled.img`
     width: 80%;
-    transition: opacity 0.5s;
-    opacity: ${(props)=> props.hide ? "0" : "1"}
+    transition: opacity 0.5s ease-out;
+    opacity: ${(props: MediaProps) => props.showVideo ? "0" : "1"}
+`
+
+const Video = styled.video` 
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: ${(props: MediaProps) => props.showVideo ?  "50%" :"-50%" };
+    transition: left 0.5s ease-out;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+
 `
 
 const Right = styled.div`
@@ -90,8 +111,9 @@ const ServicesItem = styled.li`
     align-items: center;
     justify-content:center;
     gap: 2rem;
-    -webkit-box-shadow: 0px 0px 17px -11px rgba(0, 0, 0, 0.58);
-    box-shadow: 0px 0px 17px -11px rgba(0, 0, 0, 0.58);
+    -webkit-box-shadow: 0px 0px 17px -11px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 17px -11px rgba(0, 0, 0, 1);
+
 `
 
 const SearchIcon = styled(AiOutlineSearch)`

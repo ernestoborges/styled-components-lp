@@ -1,20 +1,37 @@
 import styled from "styled-components"
 import { StyledButton } from "./Button"
+import {useState} from "react";
 
 export function Contact() {
+
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [subject, setSubject] = useState("")
+    const [message, setMessage] = useState("")
+
+    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
+        alert(`
+            name: ${name}
+            email: ${email}
+            subject: ${subject}
+            message: ${message}
+        `)
+    }
+
     return (
         <>
             <Container>
                 <Left>
                     <h2>Questions?<br />Let's Get In Touch</h2>
-                    <form>
+                    <form id="contact-form" onSubmit={ event => handleSubmit(event)}>
                         <div>
-                            <Input placeholder="Your Name" />
-                            <Input placeholder="Your Email" />
-                            <Input placeholder="Subject" />
+                            <Input onChange={(e)=>setName(e.target.value)} name="Name" placeholder="Your Name" />
+                            <Input onChange={(e)=>setEmail(e.target.value)} name="Email" placeholder="Your Email" />
+                            <Input onChange={(e)=>setSubject(e.target.value)} name="Subject" placeholder="Subject" />
                         </div>
                         <div>
-                            <TextArea placeholder="Your Message" />
+                            <TextArea onChange={(e)=>setMessage(e.target.value)} name="Message" placeholder="Your Message" />
                             <Button>Send</Button>
                         </div>
                     </form>

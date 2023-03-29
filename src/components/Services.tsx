@@ -9,7 +9,7 @@ export function Services() {
     return (
         <>
             <Left>
-                <Image src="images/woman-tablet.png" showVideo={showVideo} />
+                <Image src="src/assets/images/woman-tablet.png" showVideo={showVideo} />
                 <Video
                     showVideo={showVideo}
                     autoPlay

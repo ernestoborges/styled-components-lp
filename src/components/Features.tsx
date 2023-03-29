@@ -25,7 +25,7 @@ export function Features() {
                     </footer>
                 </Article>
             </Right>
-            <Image src="images/app.png" />
+            <Image src="src/assets/images/app.png" />
             <Shape />
         </>
     )

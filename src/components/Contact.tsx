@@ -39,15 +39,15 @@ export function Contact() {
                 <Right>
                     <List>
                         <ListItem>
-                            <span><Icon src="images/map.png" /></span>
+                            <span><Icon src="src/assets/images/map.png" /></span>
                             <span>123 Park Avenue St., New York, USA</span>
                         </ListItem>
                         <ListItem>
-                            <span><Icon src="images/phone.png" /></span>
+                            <span><Icon src="src/assets/images/phone.png" /></span>
                             <span><span>+1 631 1234 5678</span><span>+1 326 1234 5678</span></span>
                         </ListItem>
                         <ListItem>
-                            <span><Icon src="images/send.png" /></span>
+                            <span><Icon src="src/assets/images/send.png" /></span>
                             <span><span>contact@ernesto.dev</span><span>sales@ernesto.dev</span></span>
                         </ListItem>
                     </List>

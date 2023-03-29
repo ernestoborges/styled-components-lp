@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Contact } from "./components/Contact";
 import { Features } from "./components/Features";
 import { Home } from "./components/Home";
+import { PageFooter } from "./components/PageFooter";
 import { PageHeader } from "./components/PageHeader";
 import { Prices } from "./components/Prices";
 import { Services } from "./components/Services";
@@ -12,22 +13,22 @@ export function App() {
   return (
     <div className="App">
       <PageHeader />
-      <Container>
+      <Container id="home">
         <Home />
       </Container>
-      <Container>
+      <Container id="features">
         <Features />
       </Container>
-      <Container>
+      <Container id="services">
         <Services />
       </Container>
-      <Container>
+      <Container id="prices">
         <Prices />
       </Container>
-      <Container>
+      <Container id="contact">
         <Contact />
       </Container>
-
+      <PageFooter />
     </div>
   )
 }

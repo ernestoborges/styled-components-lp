@@ -48,7 +48,7 @@ export function Contact() {
                         </ListItem>
                         <ListItem>
                             <span><Icon src="images/send.png" /></span>
-                            <span><span>contact@lama.dev</span><span>sales@lama.dev</span></span>
+                            <span><span>contact@ernesto.dev</span><span>sales@ernesto.dev</span></span>
                         </ListItem>
                     </List>
                 </Right>

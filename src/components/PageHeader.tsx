@@ -11,11 +11,11 @@ export function PageHeader() {
                     </Logo>
                     <nav>
                         <NavbarList>
-                            <NavbarItem>Home</NavbarItem>
-                            <NavbarItem>Features</NavbarItem>
-                            <NavbarItem>Services</NavbarItem>
-                            <NavbarItem>Pricing</NavbarItem>
-                            <NavbarItem>Contact</NavbarItem>
+                            <NavbarItem><a href="#home">Home</a></NavbarItem>
+                            <NavbarItem><a href="#features">Features</a></NavbarItem>
+                            <NavbarItem><a href="#services">Services</a></NavbarItem>
+                            <NavbarItem><a href="#prices">Pricing</a></NavbarItem>
+                            <NavbarItem><a href="#contact">Contact</a></NavbarItem>
                         </NavbarList>
                     </nav>
                 </Left>
@@ -32,7 +32,7 @@ const Container = styled.header`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 100;
     width: 100%;
     padding: 0.4rem 2rem;
     font-weight: bold;

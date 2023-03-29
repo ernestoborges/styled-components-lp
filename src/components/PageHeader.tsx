@@ -32,7 +32,7 @@ const Container = styled.header`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     padding: 0.4rem 2rem;
     font-weight: bold;

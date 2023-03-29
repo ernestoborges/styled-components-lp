@@ -23,7 +23,7 @@ export function Home() {
                     </Footer>
                 </Article>
             </Left>
-            <Image src="src/assets/images/woman.png" />
+            <Image src="images/woman.png" />
             <Shape />
         </>
     )
